@@ -4,11 +4,13 @@ import java.io.IOException;
 import java.io.Serial;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
-import com.pepproject.model.Transaction;
 
 import com.pepproject.dao.BankUserDao;
 import com.pepproject.dao.BankUserDaoImpl;
+import com.pepproject.models.LoginResult;
+import com.pepproject.models.Transaction;
 import com.pepproject.service.BankService;
 import com.pepproject.service.BankServiceImpl;
 import jakarta.servlet.ServletException;
@@ -33,13 +35,14 @@ public class Login extends HttpServlet {
 
         String accStr = request.getParameter("accountNumber");
         String password = request.getParameter("password");
-        String rememberMe = request.getParameter("rememberMe");
+//        String rememberMe = request.getParameter("rememberMe");
 
         try {
             int accountNo = Integer.parseInt(accStr);
 
             // 1. Authenticate via Service
-            var loginResultOpt = bankService.authenticate(accountNo, password);
+            Optional<LoginResult> loginResultOpt = bankService.authenticate(accountNo, password);
+
 
             if (loginResultOpt.isPresent()) {
                 var details = loginResultOpt.get();
@@ -57,15 +60,15 @@ public class Login extends HttpServlet {
                 session.setAttribute("transactionDetailsList", statement);
 
                 // 4. Handle "Remember Me" Cookie
-                Cookie userCookie = new Cookie("rememberedAccount", accStr);
-                userCookie.setHttpOnly(true); // Security: Prevents JS access
-
-                if ("on".equals(rememberMe)) {
-                    userCookie.setMaxAge(60 * 60 * 24 * 30); // 30 Days
-                } else {
-                    userCookie.setMaxAge(0); // Delete cookie if not checked
-                }
-                response.addCookie(userCookie);
+//                Cookie userCookie = new Cookie("rememberedAccount", accStr);
+//                userCookie.setHttpOnly(true); // Security: Prevents JS access
+//
+//                if ("on".equals(rememberMe)) {
+//                    userCookie.setMaxAge(60 * 60 * 24 * 30); // 30 Days
+//                } else {
+//                    userCookie.setMaxAge(0); // Delete cookie if not checked
+//                }
+//                response.addCookie(userCookie);
 
                 log.info("User " + accountNo + " logged in successfully.");
 //                request.getRequestDispatcher("/WEB-INF/views/Home.jsp").forward(request, response);

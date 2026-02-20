@@ -1,6 +1,6 @@
 package com.pepproject.dao;
 
-import com.pepproject.model.*;
+import com.pepproject.models.*;
 import com.pepproject.util.ConnectionManager;
 import com.pepproject.util.QueryLoader;
 import lombok.extern.java.Log;

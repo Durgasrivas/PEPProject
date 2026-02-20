@@ -1,9 +1,9 @@
 package com.pepproject.service;
 
-import com.pepproject.model.LoginResult;
-import com.pepproject.model.ServiceResponse;
-import com.pepproject.model.Transaction;
-import com.pepproject.model.User;
+import com.pepproject.models.LoginResult;
+import com.pepproject.models.ServiceResponse;
+import com.pepproject.models.Transaction;
+import com.pepproject.models.User;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;

@@ -1,4 +1,4 @@
-package com.pepproject.model;
+package com.pepproject.models;
 
 import java.math.BigDecimal;
 

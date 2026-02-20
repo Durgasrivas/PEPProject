@@ -1,9 +1,9 @@
 package com.pepproject.dao;
 
-import com.pepproject.model.AccountRecoveryDTO;
-import com.pepproject.model.LoginResult;
-import com.pepproject.model.User;
-import com.pepproject.model.Transaction;
+import com.pepproject.models.AccountRecoveryDTO;
+import com.pepproject.models.LoginResult;
+import com.pepproject.models.User;
+import com.pepproject.models.Transaction;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;

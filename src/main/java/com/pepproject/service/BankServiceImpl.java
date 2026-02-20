@@ -2,7 +2,7 @@ package com.pepproject.service;
 
 import com.pepproject.dao.BankUserDao;
 import com.pepproject.dao.BankUserDaoImpl;
-import com.pepproject.model.*;
+import com.pepproject.models.*;
 import com.pepproject.util.MailUtil;
 import com.pepproject.util.PasswordUtil;
 import lombok.extern.java.Log;
