@@ -6,8 +6,8 @@ public class Constants {
 	public static final String PROPERTY_NAME_FOR_H2_SCRIPT = "db.h2.script.path";
 
 //	EMAIL
-	public static final String DEFAULT_MAIL = "ace.bank.dev@gmail.com";
-	public static final String DEFAULT_MAIL_GOOGLE_APP_PASSWORD = "bypmdpfeswzsmhay";
+	public static final String DEFAULT_MAIL = "srivasnetha.35@gmail.com";
+	public static final String DEFAULT_MAIL_GOOGLE_APP_PASSWORD = "@$1Piece";
 
 //	DB OLD
 //	public static final String ORACLEXE_DRIVER_NAME = "oracle.jdbc.driver.OracleDriver";
